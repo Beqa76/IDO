@@ -56,7 +56,7 @@ export default {
       accounts: [],
       providerUrl: 'https://ropsten.infura.io/v3/ec900cd712e548d890c6798e4a691b80',
       loading: false,
-      contractAddress: '0xb2d6f43822eb7ea21e9df2a5f2e6e4235e860ee3',
+      contractAddress: '0x185a764d208c064547a3336c37e7f1efbf68e18f',
       balances: [],
       tokenAmount: 0,
       whiteList: [],
@@ -101,7 +101,9 @@ export default {
       const promises = this.accounts.map((a) => {
         return getETHBalance(a.address)
       })
+
       this.balances = await Promise.all(promises)
+      console.log(this.balances)
     },
     async getWhitelisted() {
       const promises = this.accounts.map((a) => {

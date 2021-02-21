@@ -11,14 +11,12 @@ module.exports = class ERC20TokenContract {
     if (acc) {
       this.acc = acc
     }
-    console.log('ERC20TokenContract', '123')
     this.params = {
       web3: web3,
       contractAddress: contractAddress,
       contract: new contract(web3, ierc20, contractAddress),
       decimals: decimals,
     }
-    console.log('ERC20TokenContract', '456')
     self = {
       contract: new contract(web3, ierc20, contractAddress),
     }

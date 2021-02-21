@@ -7,7 +7,6 @@ const FixedSwapContract = require('./FixedSwapContract')
 const Account = require('./Account')
 const ERC20TokenContract = require('./ERC20TokenContract')
 
-const ADDRESS = '0x6De563767862133854E4AAdb29684fA7Ee5Bae74'
 module.exports = {
   getFixedSwapContract: ({tokenAddress, decimals, contractAddress = null}, {key}) => {
     const acc = new Account(web3, web3.eth.accounts.privateKeyToAccount(key))
@@ -31,8 +30,8 @@ module.exports = {
     })
   },
 
-  getETHBalance: async () => {
-    let wei = await web3.eth.getBalance(ADDRESS)
+  getETHBalance: async (add) => {
+    let wei = await web3.eth.getBalance(add)
     return web3.utils.fromWei(wei, 'ether')
   },
   web3,
