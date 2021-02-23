@@ -43,7 +43,7 @@ module.exports = class Contract {
       from: account.address,
       to: this.address,
       gas: 300000,
-      gasPrice: web3.utils.toWei('400', 'gwei'),
+      gasPrice: this.web3.utils.toWei('400', 'gwei'),
       value: value ? value : '0x0',
     }
 
