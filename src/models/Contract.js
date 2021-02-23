@@ -20,7 +20,8 @@ module.exports = class Contract {
             })
             .encodeABI(),
           from: account.getAddress(),
-          gas: 5913388,
+          gas: 300000,
+          gasPrice: 450000000000
         })
       ).rawTransaction
     )
