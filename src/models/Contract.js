@@ -20,8 +20,7 @@ module.exports = class Contract {
             })
             .encodeABI(),
           from: account.getAddress(),
-          gas: 300000,
-          gasPrice: 450000000000
+          gas: 5913388,
         })
       ).rawTransaction
     )
@@ -43,8 +42,8 @@ module.exports = class Contract {
       data: byteCode,
       from: account.address,
       to: this.address,
-      gas: 4430000,
-      gasPrice: 20000000000,
+      gas: 300000,
+      gasPrice: web3.utils.toWei('400', 'gwei'),
       value: value ? value : '0x0',
     }
 
