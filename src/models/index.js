@@ -1,5 +1,5 @@
 const Web3 = require('web3')
-const ETH_URL_TESTNET = 'https://ropsten.infura.io/v3/f8f39552118b4f23bf57e774021fa01b'
+const ETH_URL_TESTNET = 'https://mainnet.infura.io/v3/f8f39552118b4f23bf57e774021fa01b'
 // const ETH_URL_MAINNET = 'https://mainnet.infura.io/v3/40e2d4f67005468a83e2bcace6427bc8'
 const web3 = new Web3(ETH_URL_TESTNET)
 
